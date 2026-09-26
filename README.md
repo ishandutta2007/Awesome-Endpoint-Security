@@ -68,7 +68,7 @@ Top enterprise Endpoint Protection Platforms (EPP), EDR, and XDR cloud solutions
 
 ## 🔓 Open-Source Endpoint Security & Telemetry Projects
 
-Top open-source security tools, EDR agents, forensic toolkits, threat hunting frameworks, and malware analysis tools sorted by GitHub Stars (descending).
+Top open-source security tools, EDR agents, forensic toolkits, threat hunting frameworks, and malware analysis tools sorted by GitHub_Stars (descending).
 
 - [<img src="https://img.shields.io/github/stars/grafana/grafana?style=social&color=white" alt="grafana Stars"/>](https://github.com/grafana/grafana/stargazers) **[Grafana](https://github.com/grafana/grafana)** (68,500+ ⭐) - Open-source visualization and observability platform for security operational dashboards.
 - [<img src="https://img.shields.io/github/stars/prometheus/prometheus?style=social&color=white" alt="prometheus Stars"/>](https://github.com/prometheus/prometheus/stargazers) **[Prometheus](https://github.com/prometheus/prometheus)** (57,200+ ⭐) - Systems monitoring and alerting toolkit used for monitoring endpoint agent infrastructure.
