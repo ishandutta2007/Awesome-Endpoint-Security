@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Dynamic / Animated Background Elements -->
+  <g opacity="0.25">
+    <!-- Pulsing Shield Glow -->
+    <circle cx="1020" cy="150" r="90" fill="#6366f1">
+      <animate attributeName="r" values="80;105;80" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Moving Radar Sweep Line -->
+    <line x1="1020" y1="150" x2="1140" y2="150" stroke="#38bdf8" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" from="0 1020 150" to="360 1020 150" dur="6s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- Dynamic Threat Flow Waves -->
+    <path d="M-100,220 C200,280 400,160 700,240 C900,290 1100,200 1300,230" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="10 15">
+      <animate attributeName="stroke-dashoffset" values="0;-100" dur="8s" repeatCount="indefinite" />
+    </path>
+    <path d="M-100,240 C300,180 500,270 800,190 C1000,240 1150,180 1300,210" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="6 12">
+      <animate attributeName="stroke-dashoffset" values="0;100" dur="10s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Grid Overlay -->
+    <path d="M0,50 H1200 M0,100 H1200 M0,150 H1200 M0,200 H1200 M0,250 H1200" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 8" />
+    <path d="M200,0 V300 M400,0 V300 M600,0 V300 M800,0 V300 M1000,0 V300" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 8" />
+  </g>
+
+  <!-- Decorative Target & Node Diagrams (Right Side) -->
+  <g transform="translate(1020, 150)">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#818cf8" stroke-width="2" />
+    <!-- Shield Icon in Center -->
+    <path d="M-15,-20 L0,-28 L15,-20 V5 C15,18 0,26 0,26 C0,26 -15,18 -15,5 Z" fill="url(#titleGrad)" opacity="0.9" />
+  </g>
+
+  <!-- Foreground Text Content (High Z-index, perfectly readable) -->
+  <g transform="translate(70, 0)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 48)">
+      <rect width="240" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+      <text x="120" y="18" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">
+        🛡️ CYBERSECURITY ECOSYSTEM
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="135" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" filter="url(#glow)" letter-spacing="-0.5">
+      Awesome Endpoint Security
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="175" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400">
+      Curated Ecosystem of Enterprise EPP/EDR/XDR SaaS Platforms &amp; Open-Source Tools
+    </text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 210)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="130" height="30" rx="6" fill="#0f172a" stroke="#334155" />
+      <text x="65" y="19" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">🔍 EDR &amp; Telemetry</text>
+
+      <!-- Tag 2 -->
+      <rect x="140" y="0" width="140" height="30" rx="6" fill="#0f172a" stroke="#334155" />
+      <text x="210" y="19" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">🎯 Threat Hunting</text>
+
+      <!-- Tag 3 -->
+      <rect x="290" y="0" width="155" height="30" rx="6" fill="#0f172a" stroke="#334155" />
+      <text x="367" y="19" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">⚡ Incident Response</text>
+
+      <!-- Tag 4 -->
+      <rect x="455" y="0" width="150" height="30" rx="6" fill="#0f172a" stroke="#334155" />
+      <text x="530" y="19" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">🧪 Malware Analysis</text>
+    </g>
+  </g>
+</svg>
